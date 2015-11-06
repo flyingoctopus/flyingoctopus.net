@@ -12,7 +12,7 @@ var Header = React.createClass({
     return (
       <header className='py2'>
         <h1 className='mt0'>{this.props.title}</h1>
-        <div className='mxn2'>
+        <div className='mxn2 nav'>
           <Link to='/' className='button button-transparent'>Index</Link>
           <Link to='/about' className='button button-transparent'>About</Link>
         </div>
