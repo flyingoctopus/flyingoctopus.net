@@ -5,7 +5,6 @@ var Index = React.createClass({
   render: function () {
     return (
       <main>
-        Index component
         <article>
           <h2>flyingoctopus.net</h2>
         </article>
