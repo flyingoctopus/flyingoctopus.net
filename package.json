@@ -1,0 +1,31 @@
+{
+  "name": "flyingoctopus.net",
+  "version": "0.1.0",
+  "description": "A directory of wonderful things",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack --progress --colors",
+    "prod": "webpack -p --progress --colors",
+    "dev": "webpack-dev-server --progress --colors",
+    "start": "npm run dev"
+  },
+  "author": "Vincent van Haaff",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-loader": "^5.3.2",
+    "basscss": "^6.1.6",
+    "cjsx-loader": "^2.0.1",
+    "css-loader": "^0.14.4",
+    "haml-coffee": "^1.14.1",
+    "haml-loader": "^0.1.0",
+    "node-libs-browser": "^0.5.2",
+    "node-sass": "^3.4.1",
+    "react": "^0.13.3",
+    "react-router": "^0.13.3",
+    "sass-loader": "^3.1.1",
+    "static-site-generator-webpack-plugin": "1.1.2",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.9.0"
+  }
+}
