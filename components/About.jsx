@@ -5,7 +5,6 @@ var About = React.createClass({
   render: function () {
     return (
       <main>
-        About component
       </main>
     )
   }
