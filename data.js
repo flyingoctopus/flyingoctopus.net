@@ -1,9 +1,11 @@
-
 module.exports = {
-  title: 'My Static Site',
+  title: 'flyingoctopus.net',
   routes: [
     '/',
-    '/about'
+    '/about',
+    '/bio',
+    '/works',
+    '/resume.cv'
   ]
 }
 

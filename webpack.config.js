@@ -3,7 +3,7 @@ var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
 var data = require('./data')
-
+/k
 module.exports = {
   entry: path.resolve(__dirname, './js/entry.coffee'),
 
