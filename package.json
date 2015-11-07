@@ -4,9 +4,9 @@
   "description": "A directory of wonderful things",
   "main": "index.js",
   "scripts": {
-    "webpack": "webpack --progress --colors",
+    "webpack": "webpack --progress --colors --display-error-details",
     "prod": "webpack -p --progress --colors",
-    "dev": "webpack-dev-server --progress --colors",
+    "dev": "webpack-dev-server --progress --colors --display-error-details",
     "start": "npm run dev"
   },
   "author": "Vincent van Haaff",
@@ -15,7 +15,9 @@
     "babel-loader": "^5.3.2",
     "basscss": "^6.1.6",
     "cjsx-loader": "^2.0.1",
+    "coffee-loader": "^0.7.2",
     "css-loader": "^0.14.4",
+    "extract-text-webpack-plugin": "^0.9.1",
     "haml-coffee": "^1.14.1",
     "haml-loader": "^0.1.0",
     "node-libs-browser": "^0.5.2",

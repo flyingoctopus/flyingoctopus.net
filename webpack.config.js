@@ -1,30 +1,47 @@
 
 var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin')
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var path = require('path');
 var data = require('./data')
 
 module.exports = {
-  entry: './entry.js',
+  entry: path.resolve(__dirname, './js/entry.coffee'),
 
   output: {
+    path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
-    path: __dirname,
     libraryTarget: 'umd'
   },
 
   module: {
     loaders: [
-      { test: /\.jsx?$/, loader: 'babel' },
+      { test: /\.jsx?$/,
+				exclude: /(node_modules|bower_components)/,
+				loader: 'babel',
+        query: {
+          cacheDirectory: true
+        }
+			},
       { test: /\.cjsx$/, loaders: ['coffee', 'cjsx']},
       { test: /\.coffee$/, loader: 'coffee'},
       { test: /\.haml$/, loaders: [ 'haml' ] },
       { test: /\.html\.hamlc$/, loader: 'haml' },
       { test: /\.css$/, loaders: [ 'css' ] },
-      { test: /\.scss$/, loaders: ['style', 'css', 'sass'] }
+      { test: /\.scss$/, loader: "style!css!sass" },
+      { test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$/, loader: "file" }
     ]
   },
+	resolve: {
+		// you can now require('file') instead of require('file.coffee')
+    extensions: ['', '.js', '.json', '.cjsx', '.coffee']
+	},
 
   plugins: [
-    new StaticSiteGeneratorPlugin('bundle.js', data.routes, data)
+    new StaticSiteGeneratorPlugin('bundle.js', data.routes, data),
+    new ExtractTextPlugin('public/style.css', {
+      allChunks: true
+    })
+
   ],
 
 }
