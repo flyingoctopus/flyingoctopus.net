@@ -3,9 +3,7 @@ var React = require('react')
 var Router = require('react-router')
 var RouteHandler = Router.RouteHandler
 var Header = require('./Header.jsx')
-
-// var css = require("!style!css!sass!./base.css");
-var css = require("!css!sass!../css/base.scss");
+var css = require('!style!css!sass!./../css/base.scss')
 
 var Root = React.createClass({
   propTypes: {

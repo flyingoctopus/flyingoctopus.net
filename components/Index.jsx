@@ -6,7 +6,7 @@ var Index = React.createClass({
     return (
       <main>
         <article>
-          <h2>Coming Soon</h2>
+          <h2 class="subheader">Coming Soon</h2>
         </article>
         <video autoPlay="autoplay" loop id="video-background">
           <source src="http://cdn.flyingoctopus.net.s3.amazonaws.com/bin/video/flyingoctopus.net/Claire_de_Lune.mp4" type="video/mp4" />
