@@ -13,6 +13,8 @@ module.exports = {
     libraryTarget: 'umd'
   },
 
+  devtool: 'source-map',
+
   module: {
     loaders: [
       { test: /\.jsx?$/,
