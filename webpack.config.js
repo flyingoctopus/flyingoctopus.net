@@ -28,6 +28,7 @@ module.exports = {
       { test: /\.html\.hamlc$/, loader: 'haml' },
       { test: /\.css$/, loaders: [ 'css' ] },
       { test: /\.scss$/, loader: "style!css!sass" },
+      { test: /\.md$/, loader: "html!markdown" },
       { test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$/, loader: "file" }
     ]
   },
@@ -35,6 +36,10 @@ module.exports = {
 		// you can now require('file') instead of require('file.coffee')
     extensions: ['', '.js', '.json', '.cjsx', '.coffee']
 	},
+  context: __dirname,
+  node: {
+    __filename: true
+  },
 
   plugins: [
     new StaticSiteGeneratorPlugin('bundle.js', data.routes, data),
