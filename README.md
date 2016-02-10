@@ -1,5 +1,5 @@
 ![awe
-yeahh](https://dl.dropboxusercontent.com/u/567408/%3Ab%3A/tumblr_mang8zbci31rfo5loo3_250.gif)
+yeahh](https://dl.dropboxusercontent.com/u/567408/gifs/its-happening.gif)
 
 A boilerplate repo for generating a static with with React and webpack
 

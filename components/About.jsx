@@ -9,7 +9,7 @@ var About = React.createClass({
   render: function () {
     return (
       <main>
-        <article>
+        <article id="resume">
           <h2 class="subheader">About</h2>
           <div dangerouslySetInnerHTML={ this.rawMarkup() } />
         </article>
