@@ -1,6 +1,3 @@
-# Resume #
-## Skills ##
-## Experience ##
 * flyingoctopus
 * Newland Systems
 * Rouxbe Cooking School
