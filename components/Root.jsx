@@ -3,6 +3,7 @@ var React = require('react')
 var Router = require('react-router')
 var RouteHandler = Router.RouteHandler
 var Header = require('./Header.jsx')
+var Footer = require('./Footer.jsx')
 var css = require('!css!sass!./../css/base.scss')
 
 var Root = React.createClass({
@@ -24,6 +25,7 @@ var Root = React.createClass({
         <body className='p2'>
          <Header {...this.props} />
           <RouteHandler {...this.props} />
+          <Footer {...this.props} />
           <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
           <script
             id='initial-props'

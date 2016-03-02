@@ -1,6 +1,7 @@
 
 var React = require('react')
 var Router = require('react-router')
+var Logo = require('./Logo.jsx')
 var Link = Router.Link
 
 var Header = React.createClass({
@@ -11,11 +12,8 @@ var Header = React.createClass({
   render: function () {
     return (
       <header className='py2'>
-        <h1 className='mt2'>flyingoctopus.net</h1>
-        <div className='mxn2 nav'>
-          <Link to='/' className='button button-transparent'>Index</Link>
-          <Link to='/about' className='button button-transparent'>About</Link>
-        </div>
+        <Logo />
+        <Link to='/' className='mxn2 title'><h1 className='mt2'>Hi</h1></Link>
       </header>
     )
   }

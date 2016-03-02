@@ -100,7 +100,7 @@ h2 {
 		height: 100%;
 	}
 
-  #logo {
+  #logo-as-bg {
     position:relative;
     margin: 0 auto;
 		text-align:center;
@@ -113,8 +113,23 @@ h2 {
       width: $logo-size-small;
       height: $logo-size-small;
     }
-
   }
+
+  .logo_path {
+    position:relative;
+    margin: 0 auto;
+		text-align:center;
+    width: $logo-size;
+    height: $logo-size;
+    background: white;
+    /*-webkit-mask: url('/assets/flyingoctopus.svg') center / contain no-repeat;*/
+
+    @media screen and (max-width: $break-small) {
+      width: $logo-size-small;
+      height: $logo-size-small;
+    }
+  }
+
 }
 
 #resume {

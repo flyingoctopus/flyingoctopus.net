@@ -9,7 +9,7 @@ var Index = React.createClass({
           <div id="hero">
             <div id="logo"></div>
 						<div id="hero-content">
-							<h2 class="subheader">Coming Soon</h2>
+							<h2 class="subheader">flyingoctopus.net</h2>
 						</div>
             <video autoPlay="autoplay" loop id="video-background">
               <source src="http://cdn.flyingoctopus.net.s3.amazonaws.com/bin/video/flyingoctopus.net/Claire_de_Lune.mp4" type="video/mp4" />
