@@ -11,7 +11,7 @@ var Header = React.createClass({
   render: function () {
     return (
       <header className='py2'>
-        <h1 className='mt0'>flyingoctopus.net</h1>
+        <h1 className='mt2'>flyingoctopus.net</h1>
         <div className='mxn2 nav'>
           <Link to='/' className='button button-transparent'>Index</Link>
           <Link to='/about' className='button button-transparent'>About</Link>
