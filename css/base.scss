@@ -1,5 +1,3 @@
-@import "~basscss/src/basscss.css";
-
 $break-large: 840px;
 $break-small: 414px;
 $logo-size-small: 250px;
@@ -133,13 +131,25 @@ h2 {
   }
 
 }
+
 footer {
   position: absolute;
+  width:100%;
+  text-align:center;
   z-index:99;
-  left: 50px;
-  right: 0;
-  bottom: 5em;
+  left:0;
+  right:0;
+  bottom:5em;
+  ul {
+    li {
+    color:white;
+    }
+  }
 }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(225, 225, 225, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
 #resume {
   h1 {

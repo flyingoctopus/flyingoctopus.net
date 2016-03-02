@@ -38,6 +38,11 @@ module.exports = {
 		// you can now require('file') instead of require('file.coffee')
     extensions: ['', '.js', '.json', '.cjsx', '.coffee']
 	},
+  alias: {
+    "basscss-base": "../node_modules/basscss-base",
+    "basscss-utilities": "../node_modules/basscss-utilities",
+    "basscss-positions": "../node_modules/basscss-positions"
+  },
   context: __dirname,
   node: {
     __filename: true

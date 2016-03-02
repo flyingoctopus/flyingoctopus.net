@@ -1,5 +1,6 @@
 
 var React = require('react')
+var MuteButton = require('./MuteButton.jsx')
 
 var Index = React.createClass({
   render: function () {
@@ -11,7 +12,7 @@ var Index = React.createClass({
 						<div id="hero-content">
 							<h2 class="subheader">flyingoctopus.net</h2>
 						</div>
-            <video autoPlay="autoplay" loop id="video-background">
+            <video autoPlay="autoplay" loop id="video-background" muted>
               <source src="http://cdn.flyingoctopus.net.s3.amazonaws.com/bin/video/flyingoctopus.net/Claire_de_Lune.mp4" type="video/mp4" />
               Your browser does not support the video tag. Womp womp.
             </video>

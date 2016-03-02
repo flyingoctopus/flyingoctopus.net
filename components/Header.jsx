@@ -13,7 +13,6 @@ var Header = React.createClass({
     return (
       <header className='py2'>
         <Logo />
-        <Link to='/' className='mxn2 title'><h1 className='mt2'>Hi</h1></Link>
       </header>
     )
   }
