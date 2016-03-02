@@ -3,7 +3,5 @@ module.exports =
   routes: [
     '/'
     '/about'
-    '/bio'
-    '/works'
     '/resume.cv'
   ]

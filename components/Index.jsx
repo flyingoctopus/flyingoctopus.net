@@ -6,6 +6,10 @@ var Index = React.createClass({
     return (
       <main>
         <article>
+          <div class="hero"></div>
+          <svg width="500" height="500">
+            <rect width="100%" height="100%" fill="green" />
+          </svg>
           <h2 class="subheader">Coming Soon</h2>
         </article>
         <video autoPlay="autoplay" loop id="video-background">
