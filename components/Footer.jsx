@@ -11,10 +11,14 @@ var Footer = React.createClass({
   render: function () {
     return (
       <footer className='pb2'>
-        <div className='mxb2 nav '>
-          <Link to='/' className='button button-transparent'>Index</Link>
-          <Link to='/about' className='button button-transparent'>About</Link>
-        </div>
+        <ul className='list-reset'>
+          <li className="inline-block mr1">
+            <Link to='/' className='button button-transparent text-decoration-none'>Index</Link>
+          </li>
+          <li className="inline-block mr1">
+            <Link to='/about' className='button button-transparent text-decoration-none'>About</Link>
+          </li>
+        </ul>
       </footer>
     )
   }
