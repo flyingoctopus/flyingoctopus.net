@@ -26,6 +26,32 @@ body {
   width: auto; 
   height: auto;
   z-index: -100;
+/*}*/
+
+
+@media only screen and (min-width: $break-large) {
+    #video-background {
+        display: block;
+        /*background-image: url("/assets/splash.jpg");*/
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -o-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        z-index:-1;
+    }
 }
 
 article {
@@ -62,10 +88,42 @@ h2 {
   text-align: center;
 }
 
+#hero {
+  width:100%;
+  max-height:468px;
+
+  #hero-content {
+		position: relative;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-box;
+		display: box;
+		-webkit-box-orient: vertical;
+		-moz-box-orient: vertical;
+		-ms-box-orient: vertical;
+		box-orient: vertical;
+		-webkit-box-pack: center;
+		-moz-box-pack: center;
+		-ms-box-pack: center;
+		box-pack: center;
+		height: 100%;
+	}
+
 .hero {
-  width: 500px;
-  height: 500px;
-  background-image: url(/assets/flyingoctopus.svg);
+    position:relative;
+    margin: 0 auto;
+		text-align:center;
+    width: $logo-size;
+    height: $logo-size;
+    background: white;
+    -webkit-mask: url('/assets/flyingoctopus.svg') center / contain no-repeat;
+
+    @media screen and (max-width: $break-small) {
+      width: $logo-size-small;
+      height: $logo-size-small;
+    }
+
+  }
 }
 
 #resume {

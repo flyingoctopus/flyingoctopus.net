@@ -22,7 +22,7 @@ var Root = React.createClass({
           <style dangerouslySetInnerHTML={{ __html: css }} />
         </head>
         <body className='p2'>
-          <Header {...this.props} />
+         <Header {...this.props} />
           <RouteHandler {...this.props} />
           <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
           <script
