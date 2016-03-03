@@ -23,10 +23,12 @@ var VideoBG = React.createClass({
     var mute_text = this.state.muted ? 'volume off' : 'volume up';
 
     return (
-      <video autoPlay="autoplay" loop id="video-background" muted>
-        <source src="http://cdn.flyingoctopus.net/bin/video/flyingoctopus.net/Claire_de_Lune.mp4" type="video/mp4" />
-        Your browser does not support the video tag. Womp womp.
-      </video>
+      <div className="overflow-container">
+        <video autoPlay="autoplay" loop id="video-background" muted>
+          <source src="http://cdn.flyingoctopus.net/bin/video/flyingoctopus.net/Claire_de_Lune.mp4" type="video/mp4" />
+          Your browser does not support the video tag. Womp womp.
+        </video>
+      </div>
     )
   }
 })
