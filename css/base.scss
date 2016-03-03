@@ -2,7 +2,7 @@ $break-large: 840px;
 $break-small: 414px;
 $logo-size-small: 250px;
 $logo-size: 500px;
-$font-stack: Oswald, sans-serif;
+$font-stack: GillSans, Calibri, Trebuchet, sans-serif;
 $font-colour: #eee;
 
 body {
@@ -42,6 +42,34 @@ body {
         -ms-transform: translateX(-50%) translateY(-50%);
         transform: translateX(-50%) translateY(-50%);
         z-index:-1;
+        /*border: 10px solid rgba(255, 255, 255, 0.5);*/
+        /*margin: 10px;*/
+    }
+}
+@media not screen and (min-width: $break-large) {
+    #video-background {
+        display: block;
+        /*background-image: url("/assets/splash.jpg");*/
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -o-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        z-index:-1;
+        /*border: 10px solid rgba(255, 255, 255, 0.5);*/
+        /*margin: 10px;*/
     }
 }
 
@@ -123,6 +151,7 @@ header {
   #logo {
     position:relative;
     margin: auto;
+    top:8em;
 		text-align:center;
     width: $logo-size;
     height: $logo-size;
@@ -130,12 +159,14 @@ header {
     @media screen and (max-width: $break-small) {
       width: $logo-size-small;
       height: $logo-size-small;
+      top:6em;
     }
 
     #logo_path {
       width: 100%;
       position:relative;
       z-index:99;
+      fill:rgba(230,230,230,0.8);
     }
 
   }
@@ -160,14 +191,20 @@ footer {
 .material-icons.md-light { color: rgba(225, 225, 225, 1); }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
-#mute-button {
+.mute-button {
   width:100%;
-  #mute-toggle-button { 
-    position:relative;
-    margin:auto;
-    background-color:white;
-    position:relative;
-    bottom: 1em;
+
+  .mute-toggle-button { 
+    position:absolute;
+    background-color:RGBA(255, 64, 129, .6);
+    text-align:right;
+    top:1em;
+    right:1em;
+    @media screen and (max-width: $break-small) {
+      right:0em;
+      text-align:left;
+      top:90%;
+    }
   }
 }
 

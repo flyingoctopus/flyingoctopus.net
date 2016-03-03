@@ -15,13 +15,11 @@ var MuteButton = React.createClass({
     this.props.callbackParent(newState);
   },
   render: function () {
-    var mute_text = this.state.muted ? 'volume off' : 'volume up';
+    var mute_text = this.state.muted ? 'volume_up' : 'volume_off';
 
     return (
-      <div id="mute-button">
-        <button id="mute-toggle-button" className="text-decoration-none mdl-button mdl-js-button mdl-button mdl-js-ripple-effect mdl-button--fab" onClick={this.handleClick}>
-          <i className='matarial-icons md-light'>{mute_text}</i>
-        </button>
+      <div className="mute-button">
+        <a className='text-decoration-none mdl-button mdl-js-button mdl-button mdl-js-ripple-effect mdl-button--fab mute-toggle-button' onClick={this.handleClick}><i className="material-icons md-light">{mute_text}</i></a>
       </div>
     )
   }

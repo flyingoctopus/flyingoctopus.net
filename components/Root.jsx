@@ -30,7 +30,9 @@ var Root = React.createClass({
           <RouteHandler {...this.props} />
           <Footer {...this.props} />
           <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+          <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css' />
           <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons' type='text/css' />
+
           <script
             id='initial-props'
             type='application/json'
