@@ -37,7 +37,6 @@ var Root = React.createClass({
             id='initial-props'
             type='application/json'
             dangerouslySetInnerHTML={initialProps} />
-            <script src='/node_modules/material-design-lite/material.min.js' />
           <script src='/bundle.js' />
         </body>
       </html>
