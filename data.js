@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'flyingoctopus.net',
+  title: 'Tech-driven art',
   routes: [
     '/',
     '/about',
