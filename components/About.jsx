@@ -1,4 +1,3 @@
-
 var React = require('react')
 var markdown = require("./../assets/resume.md")
 
@@ -10,7 +9,7 @@ var About = React.createClass({
     return (
       <main>
         <article id="resume">
-          <h2 class="subheader">About</h2>
+          <h2 className="subheader">About</h2>
           <div dangerouslySetInnerHTML={ this.rawMarkup() } />
         </article>
       </main>

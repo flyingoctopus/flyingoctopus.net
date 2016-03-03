@@ -115,21 +115,30 @@ h2 {
     }
   }
 
-  .logo_path {
+}
+
+header {
+  width:100%;
+
+  #logo {
     position:relative;
-    margin: 0 auto;
+    margin: auto;
 		text-align:center;
     width: $logo-size;
     height: $logo-size;
-    background: white;
-    /*-webkit-mask: url('/assets/flyingoctopus.svg') center / contain no-repeat;*/
 
     @media screen and (max-width: $break-small) {
       width: $logo-size-small;
       height: $logo-size-small;
     }
-  }
 
+    #logo_path {
+      width: 100%;
+      position:relative;
+      z-index:99;
+    }
+
+  }
 }
 
 footer {
@@ -150,6 +159,17 @@ footer {
 /* Rules for using icons as white on a dark background. */
 .material-icons.md-light { color: rgba(225, 225, 225, 1); }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+#mute-button {
+  width:100%;
+  #mute-toggle-button { 
+    position:relative;
+    margin:auto;
+    background-color:white;
+    position:relative;
+    bottom: 1em;
+  }
+}
 
 #resume {
   h1 {

@@ -7,18 +7,22 @@ var MuteButton = React.createClass({
     title: React.PropTypes.string
   },
   getInitialState: function () {
-    return {muted: true};
+    return {muted: this.props.initialMuted};
   },
   handleClick: function(event) {
-    this.setState({muted: !this.state.muted});
+    var newState = !this.state.muted;
+    this.setState({muted: newState});
+    this.props.callbackParent(newState);
   },
-
   render: function () {
-    var mute_text = this.state.muted ? 'mute' : 'unmute';
+    var mute_text = this.state.muted ? 'volume off' : 'volume up';
+
     return (
-      <button id="toggle-mute" onClick='{this.handleClick}'>
-        <i className='matarial-icons md-light'>{mute_text}</i>
-      </button>
+      <div id="mute-button">
+        <button id="mute-toggle-button" className="text-decoration-none mdl-button mdl-js-button mdl-button mdl-js-ripple-effect mdl-button--fab" onClick={this.handleClick}>
+          <i className='matarial-icons md-light'>{mute_text}</i>
+        </button>
+      </div>
     )
   }
 })
