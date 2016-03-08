@@ -31,3 +31,4 @@ node_modules
 bundle.js
 index.html
 about/
+build/
