@@ -1,5 +1,4 @@
 var React = require('react')
-var Router = require('react-router')
 
 var VideoBG = React.createClass({
   getInitialState: function () {

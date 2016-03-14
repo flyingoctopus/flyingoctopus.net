@@ -1,5 +1,4 @@
 var React = require('react')
-var Router = require('react-router')
 var Logo = require('./Logo.jsx')
 
 var Header = React.createClass({

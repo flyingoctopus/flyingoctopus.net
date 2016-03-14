@@ -1,6 +1,4 @@
 var React = require('react')
-var Router = require('react-router')
-var Link = Router.Link
 
 var MuteButton = React.createClass({
   propTypes: {
