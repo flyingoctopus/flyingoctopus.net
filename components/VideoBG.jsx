@@ -1,6 +1,5 @@
 var React = require('react')
 var Router = require('react-router')
-var Link = Router.Link
 
 var VideoBG = React.createClass({
   getInitialState: function () {
@@ -20,8 +19,6 @@ var VideoBG = React.createClass({
     video.muted = this.state.muted;
   },
   render: function () {
-    var mute_text = this.state.muted ? 'volume off' : 'volume up';
-
     return (
       <div className="overflow-container">
         <video autoPlay="autoplay" loop id="video-background" muted>
