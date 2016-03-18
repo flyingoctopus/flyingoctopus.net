@@ -49,4 +49,3 @@ function safeStringify (obj) {
 }
 
 module.exports = Root
-

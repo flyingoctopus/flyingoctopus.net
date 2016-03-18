@@ -1,11 +1,12 @@
 React = require('react')
+ReactDOM = require('react-dom')
 Router = require('react-router')
 Routes = require('.././Routes.jsx')
 
 if typeof document != 'undefined'
   initialProps = JSON.parse(document.getElementById('initial-props').innerHTML)
   Router.run Routes, Router.HistoryLocation, (Handler) ->
-    React.render React.createElement(Handler, initialProps), document
+    ReactDOM.render React.createElement(Handler, initialProps), document
     return
 
 module.exports = (locals, callback) ->
