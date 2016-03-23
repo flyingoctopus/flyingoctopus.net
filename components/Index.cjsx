@@ -1,5 +1,5 @@
 React = require 'react'
-MuteButton = require './MuteButton.cjsx'
+MuteButton = require './MuteButton.jsx'
 VideoBG = require './VideoBG.jsx'
 
 Index = React.createClass
