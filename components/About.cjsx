@@ -8,7 +8,7 @@ About = React.createClass
     <main>
       <article id="resume">
         <h2 className="subheader">About</h2>
-        <div dangerouslySetInnerHTML={ this.rawMarkup() } />
+        <div dangerouslySetInnerHTML={ @rawMarkup() } />
       </article>
     </main>
 

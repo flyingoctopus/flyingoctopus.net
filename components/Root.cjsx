@@ -12,18 +12,18 @@ Root = React.createClass
     title: React.PropTypes.string
   render: ->
     initialProps =
-      __html: safeStringify this.props
+      __html: safeStringify @props
     <html>
       <head>
-        <title>{this.props.title}</title>
+        <title>{@props.title}</title>
         <style dangerouslySetInnerHTML={{ __html: basscss }} />
         <style dangerouslySetInnerHTML={{ __html: materialcss }} />
         <style dangerouslySetInnerHTML={{ __html: css }} />
       </head>
       <body className='p2'>
-        <Header {...this.props} />
-        <RouteHandler {...this.props} />
-        <Footer {...this.props} />
+        <Header {...@props} />
+        <RouteHandler {...@props} />
+        <Footer {...@props} />
         <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
         <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css' />
         <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons' type='text/css' />

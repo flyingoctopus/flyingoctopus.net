@@ -3,6 +3,17 @@ React = require 'react'
 VideoBG = React.createClass
   getInitialState: ->
     muted: @props.initialChanged
+
+  componentWillReceiveProps: (nextProps) ->
+    if nextProps.dataSource != @props.dataSource
+      @loadData nextProps.dataSource
+    newState = not @state.muted
+    @setState muted: newState
+    @props.callbackParent newState
+
+    video = document.getElementById 'video-background'
+    video.muted = @state.muted
+
   render: ->
     <div className="overflow-container">
       <video autoPlay="autoplay" loop id="video-background" muted>

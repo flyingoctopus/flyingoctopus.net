@@ -2,7 +2,7 @@ React = require 'react'
 
 Logo = React.createClass
   propTypes:
-    title: 
+    title:
       React.PropTypes.string
 
   render: ->
