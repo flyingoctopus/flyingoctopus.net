@@ -8,6 +8,7 @@ module.exports =
 
   output:
     path: path.resolve __dirname, 'build'
+    publicPath: 'build'
     filename: 'bundle.js'
     libraryTarget: 'umd'
 
@@ -49,18 +50,19 @@ module.exports =
 	resolve:
     # you can now require('file') instead of require('file.coffee')
     extensions: ['', '.js', '.json', '.cjsx', '.coffee']
+
   alias:
     "basscss-base": "../node_modules/basscss-base"
     "basscss-utilities": "../node_modules/basscss-utilities"
     "basscss-positions": "../node_modules/basscss-positions"
+
   context: __dirname
+
   node:
     __filename: true
 
   plugins: [
-    new StaticSiteGeneratorPlugin('bundle.js', data.routes, data),
-    new ExtractTextPlugin('public/style.css', {
-      allChunks: true
-    })
-
+    new StaticSiteGeneratorPlugin 'bundle.js', data.routes, data
+  ,
+    new ExtractTextPlugin 'public/style.css', allChunks: true
   ]
