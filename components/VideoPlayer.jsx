@@ -7,7 +7,6 @@ var VideoPlayer = React.createClass({
   getInitialState: function () {
     console.log('vincent [init with = ' + this.props.initialChanaged);
     return {muted: this.props.initialChanged};
-    return {muted: this.props.initialChanged};
   },
 	componentWillReceiveProps: function(nextProps) {
     // Load new data when the dataSource property changes.
