@@ -4,7 +4,7 @@ path = require 'path'
 data = require './data'
 
 module.exports =
-  entry: path.resolve __dirname, './script/entry'
+  entry: path.resolve __dirname, './script/entry.coffee'
 
   output:
     path: path.resolve __dirname, 'build'
