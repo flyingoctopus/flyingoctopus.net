@@ -1,0 +1,6 @@
+localhost {
+  root build/
+  gzip
+  tls off
+  # tls vincent@vanhaaff.com
+}

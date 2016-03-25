@@ -54,6 +54,7 @@ Root = React.createClass
           id='initial-props'
           type='application/json'
           dangerouslySetInnerHTML={initialProps} />
+        <script></script>
         <script src='/bundle.js' />
       </body>
     </html>

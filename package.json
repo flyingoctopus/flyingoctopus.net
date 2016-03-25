@@ -6,9 +6,10 @@
   "main": "index.js",
   "scripts": {
     "webpack": "webpack --progress --colors --display-error-details",
+    "watch": "webpack -w --progress --colors --display-error-details",
     "prod": "webpack -p --progress --colors",
     "dev": "webpack-dev-server --progress --colors --display-error-details -d",
-    "start": "npm run dev"
+    "start": "caddy & npm run watch"
   },
   "author": "Vincent van Haaff",
   "license": "MIT",
@@ -20,6 +21,7 @@
     "coffee-loader": "^0.7.2",
     "css-loader": "^0.14.5",
     "extract-text-webpack-plugin": "^0.9.1",
+    "file-loader": "^0.8.5",
     "haml-coffee": "^1.14.1",
     "haml-loader": "^0.1.0",
     "html-loader": "^0.3.0",
@@ -36,7 +38,8 @@
     "static-site-generator-webpack-plugin": "1.1.2",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.9.0"
+    "webpack-dev-server": "^1.9.0",
+    "webpack-load-plugins": "^0.1.2"
   },
   "dependencies": {}
 }

@@ -4,7 +4,8 @@ path = require 'path'
 data = require './data'
 
 module.exports =
-  entry: path.resolve __dirname, './script/entry.coffee'
+  entry:
+    main: path.resolve __dirname, 'entry.coffee'
 
   output:
     path: path.resolve __dirname, 'build'
@@ -15,26 +16,11 @@ module.exports =
 
   module:
     loaders: [
-      test: /\.jsx?$/
-      exclude: /(node_modules|bower_components)/
-      loader: 'babel'
-      query:
-        cacheDirectory: true
-    ,
       test: /\.cjsx$/
       loaders: ['coffee', 'cjsx']
     ,
       test: /\.coffee$/
       loader: 'coffee'
-    ,
-      test: /\.haml$/
-      loaders: [ 'haml' ]
-    ,
-      test: /\.html\.hamlc$/
-      loader: 'haml'
-    ,
-      test: /\.css$/
-      loaders: [ 'css' ]
     ,
       test: /\.scss$/
       loader: "style!css!sass"
@@ -45,6 +31,9 @@ module.exports =
       test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$/
       loader: "file"
     ]
+
+    resolveLoader:
+      moduleDirectories: ['node_modules']
 
 	resolve:
     # you can now require('file') instead of require('file.coffee')
@@ -61,7 +50,5 @@ module.exports =
     __filename: true
 
   plugins: [
-    new StaticSiteGeneratorPlugin 'bundle.js', data.routes, data
-  ,
-    new ExtractTextPlugin 'public/style.css', allChunks: true
+    new StaticSiteGeneratorPlugin('build/bundle.js', data.routes, data)
   ]
