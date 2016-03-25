@@ -2,9 +2,9 @@ React = require 'react'
 Router = require 'react-router'
 Route = Router.Route
 DefaultRoute = Router.DefaultRoute
-Root = require './components/Root.cjsx'
-Index = require './components/Index.cjsx'
-About = require './components/About.cjsx'
+Root = require './app/components/Root.cjsx'
+Index = require './app/components/Index.cjsx'
+About = require './app/components/About.cjsx'
 
 Routes =
   <Route handler={Root} path='/'>
