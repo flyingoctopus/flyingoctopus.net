@@ -3,4 +3,5 @@ localhost {
   gzip
   tls off
   # tls vincent@vanhaaff.com
+  log access.log
 }

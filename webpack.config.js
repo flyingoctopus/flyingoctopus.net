@@ -11,7 +11,6 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build'),
-		publicPath: path.resolve(__dirname, 'assets'),
     libraryTarget: 'umd'
   },
 
@@ -27,7 +26,7 @@ module.exports = {
       { test: /\.coffee$/, loader: 'coffee'},
       { test: /\.scss$/, loader: "style!css!sass" },
       { test: /\.md$/, loader: "html!markdown" },
-      { test: /\.(jpg|jpeg|gif|png|ico|svg|woff|ttf)$/, loader: "file-loader?name=img/[path][name].[ext]&context=./app/images" }
+      { test: /\.(jpg|jpeg|gif|png|ico|svg|woff|ttf|xml|json)$/, loader: "file-loader?name=img/[path][name].[ext]&context=./app/static/images" }
     ]
   },
 	resolve: {
@@ -55,4 +54,3 @@ module.exports = {
   ],
 
 }
-

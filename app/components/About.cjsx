@@ -1,5 +1,5 @@
 React = require 'react'
-markdown = require './../assets/resume.md'
+markdown = require './../static/assets/resume.md'
 About = React.createClass
   rawMarkup: ->
     __html:

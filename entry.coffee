@@ -13,7 +13,6 @@ if typeof document != 'undefined'
 module.exports = (locals, callback) ->
   Router.run Routes, locals.path, (Handler) ->
     html = ReactDOM.renderToString React.createElement(Handler, locals)
-    console.log('im here ' + html)
     callback null, '<!DOCTYPE html>' + html
     return
   return

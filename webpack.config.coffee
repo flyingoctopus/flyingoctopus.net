@@ -16,6 +16,9 @@ module.exports =
 
   module:
     loaders: [
+      test: /\.jsx?$/
+      loader: 'babel'
+    ,
       test: /\.cjsx$/
       loaders: ['coffee', 'cjsx']
     ,
@@ -51,4 +54,6 @@ module.exports =
 
   plugins: [
     new StaticSiteGeneratorPlugin('build/bundle.js', data.routes, data)
+  ,
+    new ExtractTextPlugin('public/style.css', allChunks: true)
   ]
