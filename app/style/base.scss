@@ -204,6 +204,7 @@ footer {
 
   .mute-toggle-button { 
     position:absolute;
+    z-index: 99;
     background-color:RGBA(255, 64, 129, .6);
     text-align:right;
     top:1em;
