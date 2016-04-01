@@ -1,8 +1,8 @@
 // webpack.config.js
 
 var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin')
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var path = require('path');
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var path = require('path')
 var data = require('./data.js')
 
 module.exports = {
@@ -50,7 +50,6 @@ module.exports = {
     new ExtractTextPlugin('public/style.css', {
       allChunks: true
     })
-
-  ],
+  ]
 
 }
