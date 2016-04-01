@@ -13,7 +13,6 @@ if (typeof document !== 'undefined') {
 
 module.exports = function render (locals, callback) {
   Router.run(Routes, locals.path, function (Handler) {
-    console.log('help ' + locals)
     var html = ReactDOMServer.renderToString(React.createElement(Handler, locals))
     callback(null, '<!DOCTYPE html>' + html)
   })
