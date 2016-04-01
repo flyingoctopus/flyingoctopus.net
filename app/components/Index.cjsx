@@ -1,6 +1,7 @@
 React = require 'react'
-MuteButton = require './MuteButton.cjsx'
-VideoBG = require './VideoBG.cjsx'
+MuteButton = require './MuteButton'
+VideoBG = require './VideoBG-Drive-In'
+#VideoBG = require './VideoBG'
 
 Index = React.createClass
   getInitialState: ->

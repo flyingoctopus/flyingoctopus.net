@@ -4,6 +4,7 @@ RouteHandler = Router.RouteHandler
 path = require 'path'
 Header = require './Header.cjsx'
 Footer = require './Footer.cjsx'
+
 require.context '../static/images/icons/', true, /^\.\//
 basscss = require '!css!./../../node_modules/basscss/css/basscss.css' # what the actual fuck
 materialcss = require '!css!./../../node_modules/material-design-lite/material.min.css' # what the actual fuck
