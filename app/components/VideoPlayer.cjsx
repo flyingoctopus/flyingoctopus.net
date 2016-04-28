@@ -7,10 +7,10 @@ VideoPlayer = React.createClass
   getInitialState:
     muted: @props.initialChanged
 
-	componentWillReceiveProps: (nextProps) ->
+  componentWillReceiveProps: (nextProps) ->
     # Load new data when the dataSource property changes.
     if nextProps.dataSource != @props.dataSource
-      @loadData nextProps.dataSource
+    @loadData nextProps.dataSource
 
     newState =  not @state.muted
     @setState muted: newState
@@ -20,15 +20,15 @@ VideoPlayer = React.createClass
     video.muted = @state.muted
 
   preloadNext: ->
-		count = 1
-		videoPlayer = document.getElementById "ss"
-		video = document.getElementById "myVideo"
+    count = 1
+    videoPlayer = document.getElementById "ss"
+    video = document.getElementById "myVideo"
 
-		run = ->
-			video_count++
-			video_count = 1 if video_count == 4
-			videoPlayer.setAttribute "src","video/video" + video_count + ".mp4"
-			video.play()
+    run = ->
+      video_count++
+      video_count = 1 if video_count == 4
+      videoPlayer.setAttribute "src","video/video" + video_count + ".mp4"
+      video.play()
 
     return
 
