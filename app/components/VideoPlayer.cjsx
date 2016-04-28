@@ -10,7 +10,7 @@ VideoPlayer = React.createClass
   componentWillReceiveProps: (nextProps) ->
     # Load new data when the dataSource property changes.
     if nextProps.dataSource != @props.dataSource
-    @loadData nextProps.dataSource
+      @loadData nextProps.dataSource
 
     newState =  not @state.muted
     @setState muted: newState
